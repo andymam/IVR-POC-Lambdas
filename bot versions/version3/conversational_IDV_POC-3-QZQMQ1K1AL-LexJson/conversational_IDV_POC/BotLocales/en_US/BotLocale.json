@@ -1,0 +1,12 @@
+{
+    "name": "English (US)",
+    "identifier": "en_US",
+    "version": null,
+    "description": null,
+    "voiceSettings": {
+        "voiceId": "Joanna",
+        "engine": "neural",
+        "speechFoundationModel": null
+    },
+    "nluConfidenceThreshold": 0.4
+}

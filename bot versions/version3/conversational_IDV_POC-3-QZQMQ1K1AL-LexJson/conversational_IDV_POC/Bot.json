@@ -1,0 +1,13 @@
+{
+    "name": "conversational_IDV_POC",
+    "version": "3",
+    "description": null,
+    "identifier": "AQBGIE4DCE",
+    "errorLogSettings": {
+        "enabled": true
+    },
+    "dataPrivacy": {
+        "childDirected": false
+    },
+    "idleSessionTTLInSeconds": 300
+}
