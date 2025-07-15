@@ -1,1 +1,139 @@
-{"name":"OpenQuestionIntent","identifier":"9PZHKVKARA","description":"Prompts the user with an open question","parentIntentSignature":null,"sampleUtterances":[{"utterance":"I want to {RequestType}"},{"utterance":"I need to {RequestType}"},{"utterance":"{RequestType}"},{"utterance":"Can I {RequestType} ?"},{"utterance":"Help me {RequestType}"}],"intentConfirmationSetting":null,"intentClosingSetting":{"isActive":true,"nextStep":{"sessionAttributes":null,"intent":{"name":"Authenticate","slots":null},"dialogAction":{"type":"ElicitSlot","slotToElicit":"CardNumber","suppressNextMessage":null,"intentsInScope":null}},"closingResponse":{"messageGroupsList":[{"message":{"ssmlMessage":null,"customPayload":null,"plainTextMessage":{"value":"Okay, I can help you with that. First, let's get you verified. ({RequestType} module)"},"imageResponseCard":null},"variations":null}],"allowInterrupt":true}},"initialResponseSetting":{"conditional":null,"codeHook":{"isActive":true,"invocationLabel":null,"postCodeHookSpecification":{"failureResponse":null,"failureNextStep":{"sessionAttributes":null,"intent":{"name":null,"slots":null},"dialogAction":{"type":"EndConversation","slotToElicit":null,"suppressNextMessage":null,"intentsInScope":null}},"failureConditional":null,"successResponse":null,"successNextStep":{"sessionAttributes":null,"intent":{"name":null,"slots":null},"dialogAction":{"type":"ElicitSlot","slotToElicit":"RequestType","suppressNextMessage":null,"intentsInScope":null}},"successConditional":null,"timeoutResponse":null,"timeoutNextStep":{"sessionAttributes":null,"intent":{"name":null,"slots":null},"dialogAction":{"type":"EndConversation","slotToElicit":null,"suppressNextMessage":null,"intentsInScope":null}},"timeoutConditional":null},"enableCodeHookInvocation":true},"nextStep":{"sessionAttributes":null,"intent":{"name":null,"slots":null},"dialogAction":{"type":"ElicitSlot","slotToElicit":"RequestType","suppressNextMessage":null,"intentsInScope":null}},"initialResponse":null},"inputContexts":null,"outputContexts":null,"kendraConfiguration":null,"qnAIntentConfiguration":null,"bedrockAgentIntentConfiguration":null,"qInConnectIntentConfiguration":null,"dialogCodeHook":null,"fulfillmentCodeHook":null,"slotPriorities":[{"priority":1,"slotName":"RequestType"}]}
+{
+    "name": "OpenQuestionIntent",
+    "identifier": "9PZHKVKARA",
+    "description": "Prompts the user with an open question",
+    "parentIntentSignature": null,
+    "sampleUtterances": [
+        {
+            "utterance": "I want to {RequestType}"
+        },
+        {
+            "utterance": "I need to {RequestType}"
+        },
+        {
+            "utterance": "{RequestType}"
+        },
+        {
+            "utterance": "Can I {RequestType} ?"
+        },
+        {
+            "utterance": "Help me {RequestType}"
+        }
+    ],
+    "intentConfirmationSetting": null,
+    "intentClosingSetting": {
+        "isActive": true,
+        "nextStep": {
+            "sessionAttributes": null,
+            "intent": {
+                "name": "Authenticate",
+                "slots": null
+            },
+            "dialogAction": {
+                "type": "ElicitSlot",
+                "slotToElicit": "CardNumber",
+                "suppressNextMessage": null,
+                "intentsInScope": null
+            }
+        },
+        "closingResponse": {
+            "messageGroupsList": [
+                {
+                    "message": {
+                        "ssmlMessage": null,
+                        "customPayload": null,
+                        "plainTextMessage": {
+                            "value": "Okay, I can help you with that. First, let's get you verified. ({RequestType} module)"
+                        },
+                        "imageResponseCard": null
+                    },
+                    "variations": null
+                }
+            ],
+            "allowInterrupt": true
+        }
+    },
+    "initialResponseSetting": {
+        "conditional": null,
+        "codeHook": {
+            "isActive": true,
+            "invocationLabel": null,
+            "postCodeHookSpecification": {
+                "failureResponse": null,
+                "failureNextStep": {
+                    "sessionAttributes": null,
+                    "intent": {
+                        "name": null,
+                        "slots": null
+                    },
+                    "dialogAction": {
+                        "type": "EndConversation",
+                        "slotToElicit": null,
+                        "suppressNextMessage": null,
+                        "intentsInScope": null
+                    }
+                },
+                "failureConditional": null,
+                "successResponse": null,
+                "successNextStep": {
+                    "sessionAttributes": null,
+                    "intent": {
+                        "name": null,
+                        "slots": null
+                    },
+                    "dialogAction": {
+                        "type": "ElicitSlot",
+                        "slotToElicit": "RequestType",
+                        "suppressNextMessage": null,
+                        "intentsInScope": null
+                    }
+                },
+                "successConditional": null,
+                "timeoutResponse": null,
+                "timeoutNextStep": {
+                    "sessionAttributes": null,
+                    "intent": {
+                        "name": null,
+                        "slots": null
+                    },
+                    "dialogAction": {
+                        "type": "EndConversation",
+                        "slotToElicit": null,
+                        "suppressNextMessage": null,
+                        "intentsInScope": null
+                    }
+                },
+                "timeoutConditional": null
+            },
+            "enableCodeHookInvocation": true
+        },
+        "nextStep": {
+            "sessionAttributes": null,
+            "intent": {
+                "name": null,
+                "slots": null
+            },
+            "dialogAction": {
+                "type": "ElicitSlot",
+                "slotToElicit": "RequestType",
+                "suppressNextMessage": null,
+                "intentsInScope": null
+            }
+        },
+        "initialResponse": null
+    },
+    "inputContexts": null,
+    "outputContexts": null,
+    "kendraConfiguration": null,
+    "qnAIntentConfiguration": null,
+    "bedrockAgentIntentConfiguration": null,
+    "qInConnectIntentConfiguration": null,
+    "dialogCodeHook": null,
+    "fulfillmentCodeHook": null,
+    "slotPriorities": [
+        {
+            "priority": 1,
+            "slotName": "RequestType"
+        }
+    ]
+}
