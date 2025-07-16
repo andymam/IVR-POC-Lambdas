@@ -9,7 +9,8 @@ def MakePayment(intent_request):
     print("Session Attributes:", json.dumps(session_attributes))
     
     slots = intent_request['sessionState']['intent']['slots']
-    if not slots.get('amount') and session_attributes.get('savedAmount'):
+    print("BEFORE Slots:", json.dumps(slots))
+    if session_attributes.get('savedAmount'):
         slots['amount'] = {
             "value": {
                 "originalValue": session_attributes['savedAmount'],
@@ -19,7 +20,8 @@ def MakePayment(intent_request):
             "shape": "Scalar"
         }
 
-    if not slots.get('account') and session_attributes.get('savedAccount'):
+
+    if session_attributes.get('savedAccount'):
         slots['account'] = {
             "value": {
                 "originalValue": session_attributes['savedAccount'],
@@ -28,9 +30,13 @@ def MakePayment(intent_request):
             },
             "shape": "Scalar"
         }
+    
+    print("AFTER Slots:", json.dumps(slots))
+    print("Amount slot exists:", bool(slots.get('amount')))
+    print("Account slot exists:", bool(slots.get('account')))
 
     # Don't overwrite sessionAttributes — just update them
-    session_attributes['lastIntent'] = 'MakePayment'
+    # session_attributes['lastIntent'] = 'MakePayment'
 
     return {
         "sessionState": {
