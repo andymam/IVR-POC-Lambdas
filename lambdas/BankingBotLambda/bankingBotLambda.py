@@ -56,7 +56,7 @@ def MakePaymentFulfillment(intent_request):
         "messages": [
             {
                 "contentType": "PlainText",
-                "content": "Payment complete. What else you would like to do today?"
+                "content": "Payment complete. What else would you like to do today?"
             }
         ],
         "sessionId": intent_request['sessionId']
@@ -69,7 +69,7 @@ def MakePayment(intent_request):
     confirmation = intent_request['sessionState']['intent'].get('confirmationState')
 
     if confirmation == 'Denied':
-        # Clear everything
+        # clear only some session attributes
         session_attributes.pop('savedAmount', None)
         session_attributes.pop('savedAccount', None)
 
@@ -80,7 +80,7 @@ def MakePayment(intent_request):
                 },
                 "intent": {
                     "name": intent_request['sessionState']['intent']['name'],
-                    "state": "Fulfilled",  # still mark it fulfilled so Lex exits
+                    "state": "Fulfilled",
                     "slots": {
                         "amount": None,
                         "account": None
@@ -113,7 +113,6 @@ def MakePayment(intent_request):
         },
         "sessionId": intent_request['sessionId']
     }
-
 
 def CheckBalance(intent_request):
     session_attributes = get_session_attributes(intent_request)
