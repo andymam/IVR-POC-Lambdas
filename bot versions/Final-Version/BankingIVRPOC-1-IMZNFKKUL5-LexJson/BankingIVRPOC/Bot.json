@@ -1,0 +1,9 @@
+{
+  "name": "BankingIVRPOC",
+  "version": "1",
+  "description": null,
+  "identifier": "ZID8GWTNLF",
+  "errorLogSettings": { "enabled": true },
+  "dataPrivacy": { "childDirected": false },
+  "idleSessionTTLInSeconds": 300
+}

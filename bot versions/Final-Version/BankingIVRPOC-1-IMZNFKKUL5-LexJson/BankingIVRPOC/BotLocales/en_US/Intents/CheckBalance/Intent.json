@@ -1,0 +1,184 @@
+{
+  "name": "CheckBalance",
+  "identifier": "1MVYHLGTVR",
+  "description": null,
+  "parentIntentSignature": null,
+  "sampleUtterances": [
+    { "utterance": "I want to check my balance" },
+    { "utterance": "What is the balance in {account}" },
+    { "utterance": "What about my {account} account?" },
+    { "utterance": "The balance on my {account} card" },
+    { "utterance": "Need to check my balance" },
+    { "utterance": "balance" },
+    { "utterance": "balance of {account}" }
+  ],
+  "intentConfirmationSetting": null,
+  "intentClosingSetting": null,
+  "initialResponseSetting": {
+    "conditional": {
+      "isActive": true,
+      "conditionalBranches": [
+        {
+          "name": "Branch1",
+          "condition": { "expressionString": "[verified] = \"TRUE\"" },
+          "response": null,
+          "nextStep": {
+            "sessionAttributes": null,
+            "intent": { "name": null, "slots": null },
+            "dialogAction": {
+              "type": "ElicitSlot",
+              "slotToElicit": "account",
+              "suppressNextMessage": null,
+              "intentsInScope": null
+            }
+          }
+        }
+      ],
+      "defaultBranch": {
+        "response": {
+          "messageGroupsList": [
+            {
+              "message": {
+                "ssmlMessage": null,
+                "customPayload": null,
+                "plainTextMessage": {
+                  "value": "Okay, I can help you with that. First, let's verify your account"
+                },
+                "imageResponseCard": null
+              },
+              "variations": null
+            }
+          ],
+          "allowInterrupt": true
+        },
+        "nextStep": {
+          "sessionAttributes": { "CustomerIntention": "CheckBalance" },
+          "intent": { "name": "Verify", "slots": null },
+          "dialogAction": {
+            "type": "StartIntent",
+            "slotToElicit": null,
+            "suppressNextMessage": true,
+            "intentsInScope": null
+          }
+        }
+      }
+    },
+    "codeHook": {
+      "isActive": false,
+      "enableCodeHookInvocation": true,
+      "invocationLabel": null,
+      "postCodeHookSpecification": {
+        "failureResponse": null,
+        "failureNextStep": {
+          "sessionAttributes": null,
+          "intent": { "name": null, "slots": null },
+          "dialogAction": {
+            "type": "EndConversation",
+            "slotToElicit": null,
+            "suppressNextMessage": null,
+            "intentsInScope": null
+          }
+        },
+        "failureConditional": null,
+        "successResponse": null,
+        "successNextStep": {
+          "sessionAttributes": null,
+          "intent": { "name": null, "slots": null },
+          "dialogAction": {
+            "type": "ElicitSlot",
+            "slotToElicit": "account",
+            "suppressNextMessage": null,
+            "intentsInScope": null
+          }
+        },
+        "successConditional": null,
+        "timeoutResponse": null,
+        "timeoutNextStep": {
+          "sessionAttributes": null,
+          "intent": { "name": null, "slots": null },
+          "dialogAction": {
+            "type": "EndConversation",
+            "slotToElicit": null,
+            "suppressNextMessage": null,
+            "intentsInScope": null
+          }
+        },
+        "timeoutConditional": null
+      }
+    },
+    "nextStep": {
+      "sessionAttributes": null,
+      "intent": { "name": null, "slots": null },
+      "dialogAction": {
+        "type": "EvaluateConditional",
+        "slotToElicit": null,
+        "suppressNextMessage": null,
+        "intentsInScope": null
+      }
+    },
+    "initialResponse": null
+  },
+  "inputContexts": null,
+  "outputContexts": null,
+  "kendraConfiguration": null,
+  "qnAIntentConfiguration": null,
+  "bedrockAgentIntentConfiguration": null,
+  "qInConnectIntentConfiguration": null,
+  "dialogCodeHook": null,
+  "fulfillmentCodeHook": {
+    "isActive": true,
+    "postFulfillmentStatusSpecification": {
+      "failureResponse": null,
+      "failureNextStep": {
+        "sessionAttributes": null,
+        "intent": { "name": null, "slots": null },
+        "dialogAction": {
+          "type": "EndConversation",
+          "slotToElicit": null,
+          "suppressNextMessage": null,
+          "intentsInScope": null
+        }
+      },
+      "successResponse": {
+        "messageGroupsList": [
+          {
+            "message": {
+              "ssmlMessage": null,
+              "customPayload": null,
+              "plainTextMessage": {
+                "value": "What else would you like to do today?"
+              },
+              "imageResponseCard": null
+            },
+            "variations": null
+          }
+        ],
+        "allowInterrupt": true
+      },
+      "successNextStep": {
+        "sessionAttributes": null,
+        "intent": { "name": null, "slots": null },
+        "dialogAction": {
+          "type": "ElicitIntent",
+          "slotToElicit": null,
+          "suppressNextMessage": null,
+          "intentsInScope": null
+        }
+      },
+      "timeoutResponse": null,
+      "timeoutNextStep": {
+        "sessionAttributes": null,
+        "intent": { "name": null, "slots": null },
+        "dialogAction": {
+          "type": "EndConversation",
+          "slotToElicit": null,
+          "suppressNextMessage": null,
+          "intentsInScope": null
+        }
+      }
+    },
+    "fulfillmentUpdatesSpecification": null,
+    "enabled": true
+  },
+  "slotPriorities": [{ "priority": 1, "slotName": "account" }]
+}

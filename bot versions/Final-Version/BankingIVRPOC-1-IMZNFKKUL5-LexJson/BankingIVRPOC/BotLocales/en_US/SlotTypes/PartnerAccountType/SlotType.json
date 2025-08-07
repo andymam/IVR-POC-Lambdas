@@ -1,0 +1,22 @@
+{
+  "name": "PartnerAccountType",
+  "identifier": "HZBOEFUQBF",
+  "description": null,
+  "slotTypeValues": [
+    { "synonyms": null, "sampleValue": { "value": "Xbox" } },
+    {
+      "synonyms": [{ "value": " jet blue" }],
+      "sampleValue": { "value": "JetBlue" }
+    },
+    { "synonyms": null, "sampleValue": { "value": "Old Navy" } },
+    { "synonyms": null, "sampleValue": { "value": "Banana Republic" } },
+    { "synonyms": null, "sampleValue": { "value": "American Airlines" } }
+  ],
+  "parentSlotTypeSignature": null,
+  "valueSelectionSetting": {
+    "resolutionStrategy": "TOP_RESOLUTION",
+    "advancedRecognitionSetting": null,
+    "regexFilter": null
+  }
+  
+}
